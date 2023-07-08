@@ -12,8 +12,8 @@ interface PostQuery {
   pageSize: number;
 }
 
-const usePosts = (query: PostQuery) => {
-  return useInfiniteQuery<Post[], Error>({
+const usePosts = (query: PostQuery) =>
+  useInfiniteQuery<Post[], Error>({
     queryKey: ['posts', query],
     queryFn: ({ pageParam = 1 }) =>
       axios
@@ -30,6 +30,5 @@ const usePosts = (query: PostQuery) => {
       return lastPage.length > 0 ? allPages.length + 1 : undefined;
     },
   });
-};
 
 export default usePosts;
