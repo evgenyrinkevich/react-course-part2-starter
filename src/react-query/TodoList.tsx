@@ -19,6 +19,7 @@ const TodoList = () => {
     queryFn: fetchToDos,
   });
 
+  if (isLoading) return <p>Loading...</p>;
   if (error) return <p>{error.message}</p>;
 
   return (
