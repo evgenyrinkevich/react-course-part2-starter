@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
 
 interface Todo {
   id: number;
@@ -15,12 +14,12 @@ const TodoList = () => {
       .get<Todo[]>('https://jsonplaceholder.typicode.com/todos')
       .then((res) => res.data);
 
-  const { data, error, isLoading } = useQuery({
+  const { data, error, isLoading } = useQuery<Todo[], Error>({
     queryKey: ['todos'],
     queryFn: fetchToDos,
   });
 
-  // if (error) return <p>{error}</p>;
+  if (error) return <p>{error.message}</p>;
 
   return (
     <ul className='list-group'>
