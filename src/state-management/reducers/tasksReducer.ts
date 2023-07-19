@@ -8,9 +8,9 @@ interface DeleteTask {
   taskId: number;
 }
 
-type TaskAction = AddTask | DeleteTask;
+export type TaskAction = AddTask | DeleteTask;
 
-interface Task {
+export interface Task {
   id: number;
   title: string;
 }
