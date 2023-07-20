@@ -1,4 +1,4 @@
-import TaskList from '../state-management/TaskList';
+import TaskList from '../state-management/tasks/TaskList';
 
 const HomePage = () => {
   return (
