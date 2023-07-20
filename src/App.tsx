@@ -1,19 +1,16 @@
 import './App.css';
 import HomePage from './routing/HomePage';
 import NavBar from './state-management/NavBar';
-import AuthProvider from './state-management/auth/AuthProvider';
 import Counter from './state-management/counter/Counter';
 import { TasksProvider } from './state-management/tasks';
 
 function App() {
   return (
-    <AuthProvider>
-      <TasksProvider>
-        <Counter />
-        <NavBar />
-        <HomePage />
-      </TasksProvider>
-    </AuthProvider>
+    <TasksProvider>
+      <Counter />
+      <NavBar />
+      <HomePage />
+    </TasksProvider>
   );
 }
 
