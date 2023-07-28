@@ -1,9 +1,12 @@
-import TaskList from '../state-management/tasks/TaskList';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
     <>
-      <TaskList />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, quam!
+      </p>
+      <Link to='/users'>Users</Link>
     </>
   );
 };

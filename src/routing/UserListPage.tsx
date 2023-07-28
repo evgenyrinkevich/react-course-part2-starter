@@ -5,10 +5,10 @@ const UserListPage = () => {
     { id: 3, name: 'Alice' },
   ];
   return (
-    <ul className="list-group">
+    <ul className='list-group'>
       {users.map((user) => (
-        <li className="list-group-item" key={user.id}>
-          <a href="#">{user.name}</a>
+        <li className='list-group-item' key={user.id}>
+          <a href='#'>{user.name}</a>
         </li>
       ))}
     </ul>
