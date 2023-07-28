@@ -5,7 +5,7 @@ const UserDetailPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
 
-  return <p>User</p>;
+  return <p>User {params.id}</p>;
 };
 
 export default UserDetailPage;
